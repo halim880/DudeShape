@@ -1,0 +1,1320 @@
+
+/* ---------------------------------</Basic initializations>----------------------------- */
+
+:root{
+    --primary_color: white;
+    --secondary_color: #f5f5f5;
+    --yellow: #FFEF76;
+    --light_green: #77F8F1;
+    --green: #00B586;
+    --blue:#1B4367;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+body{
+    background: white;
+}
+
+@font-face {
+    src: url(../fonts/RecoletaAlt-SemiBold.ttf);
+    font-family: rec;
+}
+
+section{
+    padding: 40px 0;
+    margin: 0;
+}
+
+section> .container{
+    max-width: 1200;
+}
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+/* ---------------------------------</Basic initializations>----------------------------- */
+
+/* ---------------------------------<Navbar Section>----------------------------- */
+#navbar_section .container{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    padding: 0;
+}
+
+#navbar_section .container .learn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#navbar_section .navbar{
+    height: 70px;
+    position: relative;
+    height: 10vh;
+    width: 100%;
+}
+#navbar_section .navbar .navbar-nav{
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#navbar_section .navbar .navbar-nav .nav-list{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#navbar_section .container .navbar .logo{
+    width: 35%;
+    text-decoration: none;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 108.5%;
+    color: #333333;
+}
+
+.navbar-toggler{
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(-5%, -50%);
+    z-index: 3;
+}
+.navbar-toggler img{
+    margin: 0;
+    padding: 0;
+}
+
+#navbar_section .navbar-nav .nav-item .nav-link{
+    text-decoration: none;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 108.5%;
+    color: #333333;
+
+    transition: all 500ms ease-out;
+
+    padding: 7px 12px;
+    margin: 5px;
+}
+
+#navbar_section .navbar-nav .nav-item .nav-link:hover{
+    background: var(--green);
+    color: var(--primary_color);
+}
+
+#navbar_section .container nav .actions button{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 42px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#navbar_section .container nav .actions .login-btn{
+    width: 100px;
+    height: 42px;
+    margin-right: 10px;
+    background: #FAFAFA;
+    border: 1.5px solid #A7B6C9;
+    transition: 500ms;
+}
+
+#navbar_section .container nav .actions .login-btn:hover{
+    background: #00B586;
+    color: white;
+}
+#navbar_section .container nav .actions .register-btn{
+    background: #333333;
+    color: #FFFFFF;
+    transition: 500ms;
+}
+#navbar_section .container nav .actions .register-btn:hover{
+    background: #FAFAFA;
+    color: rgb(56, 54, 54);
+    border: 1.5px solid #A7B6C9;
+    transition: 500ms;
+}
+
+
+/* ---------------------------------</Header Section>----------------------------- */
+
+/* ---------------------------------<Landing Section>----------------------------- */
+#landing_section{
+    position: relative;
+}
+
+#landing_section .heading{
+    font-family: rec;
+    font-style: normal;
+    font-weight: normal;
+    max-width: 685px;
+    font-size: 90px;
+    line-height: 108.5%;
+    color: #333333;
+}
+
+#landing_section .description{
+    margin: 20px 0;
+    max-width: 558px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 159%;
+    letter-spacing: 0.05em;
+}
+
+#landing_section .btn{
+    width: 197px;
+    height: 60px;
+    border-radius: 0;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    /* identical to box height, or 23px */
+    
+    letter-spacing: 0.04em;
+    
+    color: #FFFFFF;
+    background: #333333;
+    border: none;
+    cursor: pointer;
+    transition: 1s;
+}
+#landing_section .btn:hover{
+    background-color: var(--green);
+    color: var(--secondary_color);
+    border-radius: 10px;
+}
+.green-blur{
+    position: absolute;
+    width: 333px;
+    height: 333px;
+    left: 25%;
+    top: -100px;
+
+    background: var(--green);
+    filter: blur(60px);
+    border-radius: 888px;
+
+    z-index: -1;
+}
+
+.yellow-blur{
+    position: absolute;
+    width: 553px;
+    height: 553px;
+    left: 37%;
+    top: -80px;
+
+    background: var(--yellow);
+    filter: blur(100px);
+    border-radius: 888px;
+    z-index: -1;
+}
+
+.trial{
+    display: flex;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.trial .star{
+    margin-right: 10px;
+}
+
+/* ---------------------------------</Landing Section>----------------------------- */
+
+/* ---------------------------------<Info Section>----------------------------- */
+
+#info_section .flexible-class{
+    margin-left: 25%;
+}
+
+#info-section .container .row> div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info-section .number-text{
+    width: 79px;
+    height: 39px;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 120.9%;
+    text-align: center;
+    color: #333333;
+}
+
+.title-text{
+    width: 175px;
+    height: 22px;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120.9%;
+
+    text-align: center;
+
+    color: #575958;
+}
+
+.flexible-class{
+    margin: auto;
+}
+
+#info-section .container .row> div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number-text{
+    width: 79px;
+    height: 39px;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 120.9%;
+    text-align: center;
+    color: #333333;
+}
+
+.title-text{
+    width: 175px;
+    height: 22px;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120.9%;
+
+    text-align: center;
+
+    color: #575958;
+}
+
+#info-section .container .row> div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info-section .container .row> div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---------------------------------</Info Section>----------------------------- */
+
+
+/* ---------------------------------</Category Section>----------------------------- */
+#category .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+#category .heading > h3{
+    text-align: center;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height */
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #00B586;
+}
+
+#category .heading > h2{
+    font-family: rec;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 120.9%;
+    /* or 53px */
+
+    text-align: center;
+    color: #333333;
+}
+
+#category .col-md-4.col-6{
+    margin-bottom: 30px;
+}
+
+.categories .card{
+    position: relative;
+    width: 383px;
+    height: 390px;
+    background: #FFFFFF;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#category .card .card-body .icon{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+
+#category .card .card-body .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#category .card .card-body h4{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #333333;
+}
+#category .card .card-body p{
+    max-width: 311px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    /* or 133% */
+
+    text-align: center;
+    color: #575958;
+}
+
+#category .card:hover {
+    box-shadow: 0px 17px 37px rgba(43, 49, 55, 0.12);
+}
+
+#category .card:hover::before{
+    content: 'Hellow';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 217px;
+    height: 218px;
+    background: #89FBC2;
+    filter: blur(50px);
+    border-radius: 888px;
+    z-index: -1;
+}
+
+#category .card:hover::after{
+    content: 'Hellow';
+    position: absolute;
+    bottom: -50px;
+    left:100px;
+    position: absolute;
+    width: 281px;
+    height: 283px;
+
+    background: var(--yellow);
+    filter: blur(120px);
+    border-radius: 888px;
+    z-index: -1;
+}
+/* ---------------------------------</Category Section>----------------------------- */
+
+/* ---------------------------------<Featured Courses Section>----------------------------- */
+
+#featured-courses{
+    background: #F5F5F5;
+}
+
+#featured-courses .header h4{
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height */
+
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    color: #00B586;
+}
+
+#featured-courses .header h3{
+    font-family: rec;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 120.9%;
+    /* or 53px */
+    color: #333333;
+    margin: 20px 0;
+}
+
+#featured-courses .category-buttons li{
+    display: inline-block;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120.9%;
+    background: #F5F5F5;
+    padding: 10px 20px;
+    border: none;
+}
+
+#featured-courses .category-buttons li.active{
+    background: #333333;
+    color: white;
+}
+
+#featured-courses .card{
+    width: 100%;
+    height: 551px;
+    border: none;
+    margin-bottom: 40px;
+    background: #FFFFFF;
+}
+
+#featured-courses .card .art{
+    padding: 7px 12px;
+    margin-right: 14px;
+    background: #FFC01D;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+    /* identical to box height */
+    outline: none;
+    border: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #333333; 
+}
+
+#featured-courses .card .design{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: #00B586;
+    color: #333333;
+    border-radius: 0;
+}
+
+#featured-courses .card .pricing{
+    position: relative;
+    /* width: ; */
+    height: 230px;
+}
+
+#featured-courses .card .price{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 30px;
+    bottom: 0;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: #6D77FB;
+    box-shadow: 0px 4px 18px rgba(27, 67, 103, 0.28);
+    color: #FFFFFF;
+}
+
+#featured-courses .card .price p{
+    margin: 0;
+}
+
+#featured-courses .card .level{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #575958;
+}
+
+#featured-courses .card .duration{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #575958;
+}
+
+#featured-courses .card .level> span:last-child,
+#featured-courses .card .duration> span:last-child{
+    padding-left:5px;
+}
+
+#featured-courses .card .footer{
+    padding: 20px 0;
+    border-top: 1px solid #E3E3E3;
+}
+
+#featured-courses .card .footer .btn{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 141.7%;
+    color: #00B586;
+}
+.card-title{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 142%;
+    /* or 26px */
+
+    color: #333333;
+}
+
+.filled {
+    color:#FFC01D;
+}
+
+.not-filled{
+    color:#bbb8b6;
+}
+
+#featured-courses .bottom{
+    position: relative;
+    margin: 50px auto 70px auto;
+}
+
+#featured-courses .bottom> img{
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    overflow: hidden;
+}
+
+#featured-courses .bottom .btn{
+    width: 270px;
+    height: 60px;
+    border-radius: 0;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 46px;
+    text-align: center;
+    color: white;
+    background: #333333;
+    transition: 1s;
+    z-index: 2;
+}
+#featured-courses .bottom .btn:hover{
+    background-color: var(--green);
+    color: var(--secondary_color);
+    border-radius: 10px;
+}
+
+/* --------------------------------</Featured Courses Section>------------------------- */
+
+
+
+/* --------------------------------<Testimonial Section>----------------------------------- */
+#testimonial .col-md-4{
+    position: relative;
+}
+
+#testimonial .bg-gradient{
+    /* position: absolute; */
+    width: 368.9px;
+    height: 326px;
+    filter: blur(150px);
+}
+#testimonial .row .col>h3{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    margin:27px 0;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #00B586;
+
+}
+
+#testimonial .row .col h2{
+    font-family: rec;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 120%;
+    text-align: center;
+    color: #333333;
+    margin-bottom:70px;
+}
+
+#testimonial .card{
+  width: 100%;
+  height: 378px;
+  padding: 34px;
+}
+
+#testimonial .card-body{
+  padding: 0;
+}
+
+#testimonial .card-body p{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #575958;
+}
+
+#testimonial .card-body .person h3{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1B4367;
+}
+
+#testimonial .card-body .person p{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height, or 162% */
+
+
+    color: #575958;
+
+    mix-blend-mode: normal;
+}
+
+#testimonial .slider-btn{
+    border: none;
+    outline: none;
+    width: 70px;
+    height: 10px;
+    margin: 0 10px;
+    background: #E3E3E3;
+    border-radius: 10px;
+}
+
+#testimonial .slider-btn.slider-btn-active{
+  background: #00B586;
+}
+/* --------------------------------</Testimonial Section>----------------------------------- */
+
+/* --------------------------------<Instructor Section>----------------------------------- */
+#instructor .container{
+    position: relative;
+}
+#instructor .container .row> h3{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height */
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    color: #00B586;
+}
+
+#instructor .container .row> h2{
+    font-family: rec;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 120.9%;
+    /* or 53px */
+
+    text-align: center;
+
+    color: #333333;
+}
+
+#instructor .card{
+    max-width: 278px;
+    height: 116px;
+    border: none;
+    border-radius: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(27, 67, 103, 0.08);
+    margin-bottom: 30px;
+}
+
+#instructor .card-body{
+    padding: 20px;
+}
+
+#instructor .card h4{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+}
+
+#instructor .card p{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 123.7%;
+    /* or 20px */
+
+
+    color: #575958;
+}
+
+#instruction .emty-box{
+    width: 100%;
+    height: 500px;
+}
+
+#instructor .green-blur{
+    position: absolute;
+    top:35%;
+    left: 25%;
+    width: 240px;
+    height: 240px;
+
+    background: #00B586;
+    filter: blur(70px);
+    border-radius: 888px;
+    z-index: -1;
+}
+
+#instructor .orange-blur{
+    position: absolute;
+    top:35%;
+    left: 45%;
+    width: 360px;
+    height: 360px;
+
+    background: #fce851;
+    filter: blur(120px);
+    border-radius: 888px;
+    z-index: -1;
+}
+
+#instructor .invite{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    /* identical to box height, or 22px */
+
+    text-align: center;
+    color: #575958;
+    margin-top: 55px;
+}
+
+#instructor .invite > a{
+    text-decoration: none;
+    color: #00B586;
+}
+/* --------------------------------</Instructor Section>----------------------------------- */
+
+
+/* --------------------------------<Learning  Section>----------------------------------- */
+
+#learning_path .container{
+    background: #F5F5F5;
+    width: 90% !important;
+    padding: 75px;
+    margin-bottom: 84px;
+}
+#learning_path .content{
+    width: 562px;
+}
+
+#learning_path .content > h4{
+    width: 208px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #00B586;
+}
+
+#learning_path .content h2{
+    width: 547px;
+    font-family: rec;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 51px;
+    color: #333333;
+}
+
+#learning_path .content p{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #575958;
+}
+/* --------------------------------</Learning Section>----------------------------------- */
+
+
+
+/* --------------------------------<Footer Section>------------------------------------ */
+#footer{
+    min-height: 569px;
+    background: var(--blue);
+   }
+
+   #footer .bottom{
+       min-height: 128px !important;
+   }
+   #footer .bottom .container{
+       padding: 0;
+        border-top: 1px solid rgba(229, 242, 239, 0.2);
+   }
+
+   #footer h3{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 39px;
+    color: #FFFFFF;
+   }
+   #footer p{
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+
+
+    /* Colors / White */
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+   }
+
+#footer input{
+    height: 40px;
+    width: 230px;
+    padding-left: 16px;
+    mix-blend-mode: normal;
+    outline: none;
+    border: 1px solid rgba(229, 242, 239, 0.33);
+    background: #1B4367;
+    color: rgba(229, 242, 239, 0.54);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#footer .subscribe {
+    background: #00B586;
+    border-radius: 0;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 10px;
+    color: #1B4367;
+    transition: 500ms;
+}
+
+#footer .subscribe:hover{
+    color: white;
+}
+
+#footer h4{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 27px;
+}
+
+#footer ul{
+    padding: 0;
+}
+#footer ul li > a{
+    display: inline-block;
+    text-decoration: none;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #DDDDDD;
+    padding: 7px 10px;
+    transition: 500ms;
+}
+
+#footer ul li > a:hover{
+    color: var(--green);
+}
+
+#footer .copyright{
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+
+    color: #E8F9F5;
+}
+
+#footer .bottom ul{
+    margin: 0;
+}
+#footer .bottom ul li{
+    margin-left: 16px;
+}
+
+#footer .bottom ul li .social-icon{
+    padding: 0;
+    margin: 0;
+
+}
+#footer .bottom ul li .social-icon svg{
+    width: 34px;
+    height: 34px;
+    background: #18455df5;
+    color: #FFFFFF;
+    border-radius: 8px;
+    transition: 500ms;
+}
+    
+#footer .bottom ul li .twitter:hover{
+    color: #1DA1F2;
+    background: white;
+    border-radius: 20%;
+}
+#footer .bottom ul li .instagram:hover{
+    color:#e95950;
+    background: white;
+    border-radius: 20%;
+}
+#footer .bottom ul li .youtube:hover{
+    color: #FF0000;
+    background: white;
+    border-radius: 20%;
+}
+#footer .bottom ul li .linkedin:hover{
+    color: #0e76a8;
+    background: white;
+    border-radius: 20%;
+}
+
+#footer .bottom ul li .facebook:hover{
+    background-color: #4267B2;
+    color: white;
+    border-radius: 20%;
+}
+
+/* --------------------------------</Footer Section>----------------------------------- */
+
+
+
+/* --------------------------------</Media Query Section>----------------------------------- */
+@media screen and (max-width: 768px){
+    section> .container{
+        width: 95% !important;
+    }
+
+    /* Navbar Section */
+    .navbar-toggler{
+        display: block;
+    }
+    .navbar-nav{
+        height: 100vh;
+        width: 100% !important;
+        position: fixed;
+        top: 80%;
+        left: 65%;
+        transform: translate(-65%, -80%);
+        padding-top: 80px;
+
+
+
+        clip-path: circle(50px at 100% -10%);
+        --webkit-clip-path: circle(100px at 90% -10%);
+
+        transition: all 1s ease-out;
+
+        /* background: #F5F5F5; */
+        background: var(--blue);
+        opacity: 0.95;
+        pointer-events: all;
+        z-index: 2;
+        flex-direction: column !important;
+        justify-content: space-evenly !important;
+        align-items: center;
+    }
+
+    #navbar_section .navbar .nav-list{
+        flex-direction: column !important;
+        justify-content: center;
+    }
+
+    .navbar-nav.open{
+        clip-path: circle(1200px at 90% 10%);
+        --webkit-clip-path: circle(1200px at 90% 10%);
+    }
+
+    .navbar .nav-item .nav-link{
+        color: var(--secondary_color) !important;
+    }
+
+    .navbar-nav .actions{
+        margin-top: 50px;
+    }
+
+    #header .container .learn{
+        position:absolute;
+        top: 100px;
+        left: 0;
+    }
+    /* Landing section */
+    #landing_section .heading{
+        font-size: 44px;
+    }
+
+    #landing_section .description{
+        font-size: 16px;
+    }
+
+    #landing_section .green-blur{
+        width: 131px;
+        height: 134px;
+        left: 45%;
+        top: -50px;
+        filter: blur(40px);
+    }
+
+    #landing_section .yellow-blur{
+        left: 50%;
+        top: -0;
+        width: 220px;
+        height: 218px;
+        filter: blur(50px);
+    }
+    /* Info section */
+    #info-section .number-text{
+        margin-bottom: 0;
+        font-size: 24px;
+    }
+
+    #info-section .title-text{
+        font-size: 16px;
+    }
+
+
+    /* Category Section  */
+    #category .heading > h3{
+        font-size: 14px;
+    }
+
+    #category .heading > h2{
+        font-size: 24px;
+    }
+
+    #category .card{
+        height: 270px;
+    }
+
+    #category .card-body{
+        padding: 12px;
+    }
+
+    #category .card .card-body h4{
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    #category .card .card-body p{
+        font-size: 14px;
+        width: 156px;
+    }
+
+    #category .card .card-body img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* Featured Courses Section */
+    #featured-courses .header h4{
+        font-size: 14px;
+    }
+    #featured-courses .header h3{
+        font-size: 24px;
+        margin: 15px 0;
+    }
+
+    #featured-courses .category-buttons li{
+        padding: 13px 13px;
+        font-size: 14px;
+    }
+    /* Learning path */
+    #learning_path .container{
+        padding: 30px;
+    }
+    #learning_path .content > h4{
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.12em;
+    }
+
+    #learning_path .content h2{
+        width: 262px;
+        margin: 20px 0;
+        font-size: 24px;
+        line-height: 117%;
+        font-weight: bold;
+    }
+
+    #learning_path .content p{
+        width: 316px;
+        font-size: 14px;
+    }
+
+    /* Instructor section */
+    #instructor .container .row> h3{
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.12em;
+    }
+    #instructor .container .row> h2{
+        font-size: 24px;
+    }
+    #instructor .card{
+        height: 78px;
+    }
+
+    #instructor .card-body{
+        padding: 12px 20px;
+    }
+    #instructor .card p{
+        font-size: 13px;
+    }
+
+    #instructor .card h4{
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    /* Footer section */
+    #footer .copyright{
+        justify-content: center;
+    }
+     #footer .bottom ul{
+         justify-content: center !important;
+     }
+}
+
+
+
+@media (max-width:415px){
+    .container{
+        padding: 0 10px !important;
+    }
+}
+/* --------------------------------</Media Query Section>----------------------------------- */
+
+
